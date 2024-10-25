@@ -1,0 +1,31 @@
+grumphp:
+    parallel:
+        enabled: true
+    tasks:
+        clover_coverage:
+            clover_file: clover.xml
+            level: 95
+#        git_commit_message:
+#            allow_empty_message: false
+#            matchers:
+#                'Must contain JIRA issue number': /JIRA-\d+/
+#        git_branch_name:
+#            whitelist:
+#                - '/JIRA-\d+/'
+#            blacklist:
+#                - 'develop'
+#                - 'master'
+        infection:
+            threads: 12
+            show_mutations: true
+            test_framework: phpunit
+            min_msi: 95
+            min_covered_msi: 90
+        phparkitect:
+            config: phparkitect.php
+        phpcsfixer:
+            config: .php-cs-fixer.dist.php
+        phpstan: null
+        phpunit:
+            config_file: phpunit.xml.dist
+        securitychecker_symfony: null

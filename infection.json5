@@ -1,0 +1,8 @@
+{
+  "source": {
+    "directories": [
+      "src"
+    ]
+  },
+  "testFramework": "phpunit"
+}
